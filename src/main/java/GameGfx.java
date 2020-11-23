@@ -1,3 +1,4 @@
+import javafx.geometry.HPos;
 import javafx.geometry.Pos;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -25,8 +26,10 @@ public class GameGfx {
                     imageView = new ImageView(cross);
                 if (figure == Figure.O)
                     imageView = new ImageView(circle);
-                if (imageView != null)
+                if (imageView != null) {
                     grid.add(imageView, col, row);
+                    GridPane.setHalignment(imageView, HPos.CENTER);
+                }
             }
         }
     }
